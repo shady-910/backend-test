@@ -1,0 +1,49 @@
+{
+  "name": "shkirat-backend-test-1",
+  "version": "1.0.0",
+  "description": "backend test array",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx sequelize-cli db:migrate; node src/app.js",
+    "dev": "nodemon src/app.js",
+    "db:migrate": "npx sequelize-cli db:migrate",
+    "db:seed": "npx sequelize-cli db:seed:all",
+    "db:unseed": "npx sequelize-cli db:seed:undo:all",
+    "test": "NODE_ENV=test npx mocha --recursive --exit 'src/**/*.spec.js'"
+  },
+  "engines": {
+    "node": ">=14.17.5"
+  },
+  "author": "Shady Shkirat",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "bcryptjs": "^2.4.3",
+    "bull": "^4.5.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "debug": "^4.3.3",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "http-errors": "^2.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "morgan": "^1.10.0",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.16.1",
+    "winston": "^3.6.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
+    "chai-http": "^4.3.0",
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-chai-friendly": "^0.7.2",
+    "eslint-plugin-import": "^2.25.4",
+    "mocha": "^9.2.0",
+    "nodemon": "^2.0.15",
+    "sinon": "^13.0.1"
+  }
+}
